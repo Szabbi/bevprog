@@ -16,7 +16,7 @@ def count(txt):
             v.letters[x] = 1
     print("Betűk gyakorisága: ", v.letters)
 
-
+    
 def reverse(txt):
     print(txt[::-1])
 
