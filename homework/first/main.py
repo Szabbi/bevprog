@@ -1,5 +1,5 @@
 def run():
-    inputText = input("Adjon meg egy mondatot: \n")
+    inputText = input("Adjon meg egy mondatot:\n")
     count(inputText)
     reverse(inputText)
     list(inputText)
