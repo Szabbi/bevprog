@@ -1,19 +1,23 @@
-import variables as v
-
 def run():
-    v.userInputNum = input("Adjon meg egy számot és egy mértékegységet (cm/inch):\n")
-    v.userInputUnit = input()
-    convert(v.userInputNum, v.userInputUnit)
+    inputNum = input("Adjon meg egy számot és egy mértékegységet (cm/inch):\n")
+    v.inputUnit = input()
+    print(convert(inputNum, v.inputUnit))
 
 
 def convert(num, unit):
-    if num.isnumeric() and "cm" in unit or "inch" in unit:
-        if "cm" in unit:
-            print(float(num) * v.convNum, "inches")
-        else:
-            print(float(num) / v.convNum, "cm")
-    else:
-        print("Isn't a number and/or not correct unit")
+    match unit:
+        case "cm":
+            return float(num) * v.convNum
+        case "inch":
+            return float(num) / v.convNum
+        case _:
+            return "Isn't a correct unit!"
+
+
+class v:
+    convNum = 2.54
+    userInputUnit = ""
+    inputUnit = ""
 
 
 if __name__ == '__main__':

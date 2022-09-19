@@ -1,29 +1,31 @@
-import variables as v
-
-
 def run():
-    v.userInput = input("Adjon meg egy mondatot: \n")
-    count(v.userInput)
-    reverse(v.userInput)
-    makeList(v.userInput)
+    inputText = input("Adjon meg egy mondatot: \n")
+    count(inputText)
+    reverse(inputText)
+    list(inputText)
 
 
-def count(txt):
-    for x in txt:
+def count(text):
+    for x in text:
         if x in v.letters:
             v.letters[x] += 1
         else:
             v.letters[x] = 1
-    print("Betűk gyakorisága: ", v.letters)
-
-    
-def reverse(txt):
-    print(txt[::-1])
+    print(f"Betűk gyakorisága: {v.letters}")
 
 
-def makeList(txt):
-    v.listOfWords = txt.split(' ')
-    print("Listába rendezve szavanként: ", v.listOfWords)
+def reverse(text):
+    print(f"Fordítva: {text[::-1]}")
+
+
+def list(text):
+    v.listOfWords = text.split(' ')
+    print(f"Listába rendezve szavanként: {v.listOfWords}")
+
+
+class v:
+    letters = {}
+    listOfWords = []
 
 
 if __name__ == '__main__':
