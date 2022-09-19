@@ -3,7 +3,7 @@ def run():
     v.inputUnit = input()
     print(convert(inputNum, v.inputUnit), "inches")
 
-s
+
 def convert(num, unit):
     match unit:
         case "cm":
