@@ -1,7 +1,7 @@
 def run():
     inputNum = input("Adjon meg egy számot és egy mértékegységet (cm/inch):\n")
     v.inputUnit = input()
-    print(convert(inputNum, v.inputUnit))
+    print(convert(inputNum, v.inputUnit), "inches")
 
 
 def convert(num, unit):
