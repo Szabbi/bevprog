@@ -1,4 +1,5 @@
 def run():
+    print("Megrajzolható-e a háromszög?")
     inputA = float(input("Adja meg az A oldal hosszát: "))
     inputB = float(input("Adja meg a B oldal hosszát: "))
     inputC = float(input("Adja meg a C oldal hosszát: "))
