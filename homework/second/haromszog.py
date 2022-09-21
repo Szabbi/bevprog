@@ -1,18 +1,18 @@
 def run():
-    print("Megrajzolható-e a háromszög?")
-    inputA = float(input("Adja meg az A oldal hosszát: "))
-    inputB = float(input("Adja meg a B oldal hosszát: "))
-    inputC = float(input("Adja meg a C oldal hosszát: "))
-    check(inputA, inputB, inputC)
+    print("Adja meg a háromszög három oldalát cm-ben:")
+    inputA = float(input("a oldal (cm): "))
+    inputB = float(input("b oldal (cm): "))
+    inputC = float(input("c oldal (cm): "))
+    calc(inputA, inputB, inputC)
 
 
-def check(sideA, sideB, sideC):
-    lenghts = [sideA, sideB, sideC]
-    lenghts.sort()
-    if lenghts[0] + lenghts[1] >= lenghts[2]:
-        print("A háromszög megrajzolható.")
+def calc(sideA, sideB, sideC):
+    l = [sideA, sideB, sideC]
+    l.sort()
+    if l[0] + l[1] >= l[2]:
+        print(f"A(z) {sideA}, {sideB} és {sideC} oldalú háromszög megszerkeszthető.")
     else:
-        print("Nem rajzolható meg a háromszög.")
+        print(f"A(z) {sideA}, {sideB} és {sideC} oldalú háromszög NEM megszerkeszthető.")
 
 
 if __name__ == '__main__':
